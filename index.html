@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="./css/main.css" />
+    <script src="./js/main.js" type="module"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Custom Web Component</title>
+  </head>
+  <body>
+    <header class="container">
+      <h1>Custom Web Component</h1>
+    </header>
+    <main class="container">
+      <span>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit,
+        sed ab laborum laboriosam explicabo cum similique adipisci illo beatae
+        autem ut molestias culpa assumenda quas officia debitis dolorum harum
+        sunt.
+      </span>
+
+      <div class="button-wrapper">
+        <button class="openDialogOne btn">First Dialog</button>
+        <button class="openDialogTwo btn">Second Dialog</button>
+      </div>
+
+      <mark-dialog
+        id="dialogOne"
+        action="displayResponse"
+        color="info"
+        dialog="respond"
+      >
+        <span slot="title">Welcome</span>
+        <span slot="message">Would you like some tea</span>
+
+        <span slot="click"></span>
+      </mark-dialog>
+
+      <mark-dialog
+        id="dialogTwo"
+        action="sayHello"
+        color="success"
+        dialog="hello"
+      >
+        <span slot="title">Greetings</span>
+        <span slot="message">Say hello back</span>
+
+        <span slot="click"></span
+      ></mark-dialog>
+    </main>
+  </body>
+</html>
