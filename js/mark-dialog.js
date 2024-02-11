@@ -49,7 +49,7 @@ template.innerHTML = `
   <h1><slot name="title"> Message Title </slot></h1>
   <p><slot name="message"> Message to user </slot></p>
 
-  <button class="btn"><slot name="click"></slot></button>
+  <button class="btn"><slot name="button"></slot></button>
 </div>
 `;
 
