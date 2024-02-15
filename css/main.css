@@ -147,3 +147,9 @@ main > span {
   display: flex;
   gap: 1rem;
 }
+
+p {
+  padding: 0.865rem;
+  text-align: center;
+  font-size: 1.2rem;
+}

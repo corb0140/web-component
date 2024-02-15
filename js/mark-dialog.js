@@ -10,11 +10,6 @@ template.innerHTML = `
     padding: 3rem;
   }
 
-  p{
-    padding: .865rem;
-    text-align: center;
-  }
-
   .info {
     background-color: grey;
     color: white;
@@ -46,10 +41,10 @@ template.innerHTML = `
 </style>
 
 <div class="content-wrapper">
-  <h1><slot name="title"> Message Title </slot></h1>
-  <p><slot name="message"> Message to user </slot></p>
+  <slot name="title"> Message Title </slot>
+  <slot name="message"> Message to user </slot>
 
-  <button class="btn"><slot name="button"></slot></button>
+  <button class="btn"><slot name="button">Click for message</slot></button>
 </div>
 `;
 
@@ -65,7 +60,7 @@ class MarkDialog extends HTMLElement {
     this.style.display = "none";
 
     // handling click event
-    let btnSlot = this.root.querySelector("button slot");
+    let btnSlot = this.root.querySelector("slot[name=button]");
 
     btnSlot.parentElement.addEventListener("click", (ev) => {
       // we want to displayMessage() from main.js when the button is clicked
