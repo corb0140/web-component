@@ -31,9 +31,9 @@ dialogTwoBtn.addEventListener("click", (ev) => {
 });
 
 dialogOne.addEventListener("click", (ev) => {
-  ev.currentTarget.close();
+  dialogOne.close();
 });
 
 dialogTwo.addEventListener("click", (ev) => {
-  ev.currentTarget.close();
+  dialogTwo.close();
 });
